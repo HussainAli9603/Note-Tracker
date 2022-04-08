@@ -14,6 +14,12 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
 
@@ -33,8 +39,8 @@
           <div class="card">
             <% var sr = 1; getAll.forEach(function(note){ %>
                <ul class="list-group" style="padding: 12px;">
-                 <li><Button  style="float: right;">Delete</Button></li>
-                 <li><h3><%= note.noteTitle %></h3></li>
+                 <li><h4><span><b><%= note.noteTitle %></b></span>
+                  <a href="/api/notes/<%= note.id %>"><i style="float: right;" class="fa fa-times-circle-o"></i></a></h4></li>
                  <li><p><%= note.noteText %></p></li>
                 </ul>
             <% }) %>

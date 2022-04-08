@@ -37,11 +37,15 @@ router.post('/api/notes',async (req,res)=>{
   console.log(newNote.data)
   res.json({success:true,message:"added successfullyy"})
 //   res.redirect('/api/notes')
-  
-
    }catch(error){
      console.log(error)
    }
+})
+
+router.get('/api/notes/:id',async (req,res)=>{
+   var id = req.params.id;
+   const noteDelete = await axios.delete("http://localhost:3003/noteTracker/"+id);
+   res.redirect('/api/notes')
 })
 
 module.exports = router;
