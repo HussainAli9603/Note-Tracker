@@ -2,7 +2,7 @@
 * 'require' is similar to import used in Java and Python. It brings in the libraries required to be used
 * in this JS file.
 * */
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 080;
 const express = require("express");
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -23,7 +23,7 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 
-const jsonServer = require('json-server')
+const jsonServer = require('jso-server')
 const server1 = jsonServer.create(app)
 const router = jsonServer.router('./db/db.json')
 const middlewares = jsonServer.defaults(app)
@@ -103,5 +103,5 @@ server.listen(PORT, () => {
   console.log("Node server is running... :", PORT);
 });
 server1.listen("3003", () => {
-  console.log("Server Json is Listening on port :", "3003");
+  console.log("Server Json is Listening on port :", "303");
 });
